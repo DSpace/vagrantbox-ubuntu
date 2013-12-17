@@ -23,19 +23,19 @@ vagrant ssh
 ```
 
 Now you're free to modify the base box to match your needs. We recommend that you replace
-/etc/apt/sources.list by one of the [methods listed here](http://askubuntu.com/questions/319433/making-mirror-mirrors-ubuntu-com-highly-available)
+/etc/apt/sources.list by one of the [methods listed here](http://askubuntu.com/questions/319433/making-mirror-mirrors-ubuntu-com-highly-available).
 
 When you're done modifying the sources.list, it's a good idea to go ahead and update the packages.
 
 ```sh
 sudo apt-get update
-<code>sudo apt-get upgrade
-<code>exit
+sudo apt-get upgrade
+exit
 ```
 
 If you'd like to pre-install any packages for your base image, now is the time to do so.
 
-When you're done, exit the vagrant ssh session, and run
+When you're done, <code>exit</code> the vagrant ssh session, and run
 
 ```sh
 vboxmanage list runningvms
