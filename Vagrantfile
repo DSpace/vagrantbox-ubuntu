@@ -6,7 +6,8 @@
 # 
 #  
 #
-Vagrant::Config.run do |config|
+#Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
 
     # Every Vagrant virtual environment requires a box to build off of.
     config.vm.box = "precise64"
@@ -18,6 +19,8 @@ Vagrant::Config.run do |config|
     # Turn on SSH forwarding (so that 'vagrant ssh' has access to your local SSH keys, and you can use your local SSH keys to access GitHub, etc.)
     config.ssh.forward_agent = true
 
-    config.vm.customize ["modifyvm", :id, "--nictype1", "virtio"]
+    # name this machine
+    config.vm.define :dspace do |t|
+    end
 
 end
