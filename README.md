@@ -9,7 +9,7 @@ this file for servers in the US is just plain rude.
 Yes, the Virtual Box Guest Additions version number increases with each new version
 of Virtual Box. And, alas, most generic Vagrant base box images don't ever
 seem able to keep up. Darn them. One easy, though somewhat time-consuming, way to
-deal with this is to install the [VB Guest plugin](https://github.com/dotless-de/vagrant-vbguest) 
+deal with this is to install the [VB Guest plugin](https://github.com/dotless-de/vagrant-vbguest). 
 
 <h2>How to use this project</h2>
 
