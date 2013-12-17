@@ -58,8 +58,8 @@ vagrant box add precise64 precise64.box
 And now, you will have your own personally-tweaked base box to use with Vagrant-DSpace, or for any Vagrant-based project that refers to a base box named "precise64".
 
 <h2>Requirements</h2>
-[Vagrant](http://www.vagrantup.com/)
-[Virtualbox](https://www.virtualbox.org/)
+ * [Vagrant](http://www.vagrantup.com/)
+ * [Virtualbox](https://www.virtualbox.org/)
 
 <h2>Optional, but highly recommended</h2>
 [VB Guest plugin](https://github.com/dotless-de/vagrant-vbguest) 
