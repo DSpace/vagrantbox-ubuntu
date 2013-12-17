@@ -15,35 +15,43 @@ deal with this is to install the [VB Guest plugin](https://github.com/dotless-de
 
 Credit where credit is due, the entire idea for this project came from [this article](http://www.pvcloudsystems.com/2012/10/vagrant-modify-existing-box/).
 
-<code>vagrant up</code>
-<code>vagrant ssh</code>
+```sh
+vagrant up
+vagrant ssh
+```
 
 Now you're free to modify the base box to match your needs. We recommend that you replace
 /etc/apt/sources.list by one of the [methods listed here](http://askubuntu.com/questions/319433/making-mirror-mirrors-ubuntu-com-highly-available)
 
 When you're done modifying the sources.list, it's a good idea to go ahead and update the packages.
 
-<code>sudo apt-get update</code>
-<code>sudo apt-get upgrade</code>
-<code>exit</code>
+```sh
+sudo apt-get update
+<code>sudo apt-get upgrade
+<code>exit
+```
 
 If you'd like to pre-install any packages for your base image, now is the time to do so.
 
 When you're done, exit the vagrant ssh session, and run
 
-<code>vboxmanage list runningvms</code>
+```sh
+vboxmanage list runningvms
+```
 
-And look for the name that Virtual Box has given this machine, it will likely be something like this: 
-
-<code>vagrantbox-ubuntu_dspace_1387309768</code>
+And look for the name that Virtual Box has given this machine, it will likely be something like this: <code>vagrantbox-ubuntu_dspace_1387309768</code>
 
 Now run
 
-<code>vagrant package --base vagrantbox-ubuntu_dspace_1387309768 --output precise64.box</code>
+```sh
+vagrant package --base vagrantbox-ubuntu_dspace_1387309768 --output precise64.box
+```
 
 Wait for that to complete, when you have a new precise64.box all packaged up, run this:
 
-<code>vagrant box add precise64 precise64.box</code>
+```sh
+vagrant box add precise64 precise64.box
+```
 
 And now, you will have your own personally-tweaked base box to use with Vagrant-DSpace, or for any Vagrant-based project that refers to a base box named "precise64".
 
@@ -53,7 +61,9 @@ And now, you will have your own personally-tweaked base box to use with Vagrant-
 
 <h2>Optional, but highly recommended</h2>
 [VB Guest plugin](https://github.com/dotless-de/vagrant-vbguest) 
-<code>  vagrant plugin install vagrant-vbguest</code>
+```sh
+vagrant plugin install vagrant-vbguest
+```
 
 <h2>License</h2>
 This work is licensed under the [DSpace BSD 3-Clause License](http://www.dspace.org/license/), which is just a standard [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause).
