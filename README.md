@@ -15,6 +15,8 @@ deal with this is to install the [VB Guest plugin](https://github.com/dotless-de
 
 Credit where credit is due, the entire idea for this project came from [this article](http://www.pvcloudsystems.com/2012/10/vagrant-modify-existing-box/).
 
+First run this:
+
 ```sh
 vagrant up
 vagrant ssh
