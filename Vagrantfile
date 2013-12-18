@@ -23,4 +23,15 @@ Vagrant.configure("2") do |config|
     config.vm.define :dspace do |t|
     end
 
+    # simple shell provisioning block for specifying the packages we'd like to be installed in this base machine
+    config.vm.provision "shell", inline: "echo provisioning base package set to make this machine useable with Vagrant-DSpace..."
+
+    # install Ruby 1.9, apt-spy2, curl, geoip-bin, all required to make
+    # initial provisioning more resilient no matter where you might be
+    # (Ubuntu deb mirror configuration is notoriously fragile)
+    config.vm.provision "shell", inline: "apt-get -y install ruby1.9.3"
+    config.vm.provision "shell", inline: "apt-get -y install curl"
+    config.vm.provision "shell", inline: "apt-get -y install geoip-bin"
+    config.vm.provision "shell", inline: "gem install apt-spy2"
+
 end
