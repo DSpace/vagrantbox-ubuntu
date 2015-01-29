@@ -10,11 +10,11 @@
 Vagrant.configure("2") do |config|
 
     # Every Vagrant virtual environment requires a box to build off of.
-    config.vm.box = "precise64"
+    config.vm.box = "trusty64"
 
     # The url from where the 'config.vm.box' box will be fetched if it
     # doesn't already exist on the user's system.
-    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
     # Turn on SSH forwarding (so that 'vagrant ssh' has access to your local SSH keys, and you can use your local SSH keys to access GitHub, etc.)
     config.ssh.forward_agent = true
