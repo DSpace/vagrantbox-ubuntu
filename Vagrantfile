@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: "apt-get -y install ruby1.9.3"
     config.vm.provision "shell", inline: "apt-get -y install curl"
     config.vm.provision "shell", inline: "apt-get -y install geoip-bin"
+    config.vm.provision "shell", inline: "apt-get -y install zlib1g-dev"
     config.vm.provision "shell", inline: "gem install apt-spy2"
 
 end
